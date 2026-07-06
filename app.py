@@ -9,10 +9,10 @@ def home():
     <html>
         <head><title>Innovartus SaaS App</title></head>
         <body>
-            <h1>🚀 Innovartus Technologies</h1>
+            <h1>Innovartus Technologies</h1>
             <p>Welcome to our SaaS application!</p>
             <p>Server Time: {}</p>
-            <p>✅ Application is live and running!</p>
+            <p>Application is live and running!</p>
         </body>
     </html>
     """.format(datetime.datetime.now())
