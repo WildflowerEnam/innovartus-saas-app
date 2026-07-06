@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: innovartus-app
+    runtime: python3
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
