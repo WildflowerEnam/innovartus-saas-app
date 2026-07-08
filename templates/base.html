@@ -30,6 +30,7 @@
                         <span class="text-gray-600 text-sm">👋 {{ session.get('user_name', 'User') }}</span>
                         <a href="{{ url_for('logout') }}" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg text-sm transition">Logout</a>
                     {% else %}
+                        <a href="{{ url_for('about') }}" class="text-gray-600 hover:text-gray-900 transition">About</a>
                         <a href="{{ url_for('login') }}" class="text-gray-600 hover:text-gray-900 transition">Login</a>
                         <a href="{{ url_for('register') }}" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg text-sm transition">Get Started</a>
                     {% endif %}
