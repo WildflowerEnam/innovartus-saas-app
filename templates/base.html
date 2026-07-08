@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -22,12 +22,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-3">
-                    <span class="text-2xl font-bold gradient-bg text-transparent bg-clip-text">Innovartus</span>
+                    <a href="{{ url_for('index') }}" class="text-2xl font-bold gradient-bg text-transparent bg-clip-text">Innovartus</a>
                     <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">SaaS</span>
                 </div>
                 <div class="flex items-center space-x-4">
-                    {% if current_user.is_authenticated %}
-                        <span class="text-gray-600 text-sm">👋 {{ current_user.email }}</span>
+                    {% if session.get('user_id') %}
+                        <span class="text-gray-600 text-sm">👋 {{ session.get('user_name', 'User') }}</span>
                         <a href="{{ url_for('logout') }}" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg text-sm transition">Logout</a>
                     {% else %}
                         <a href="{{ url_for('login') }}" class="text-gray-600 hover:text-gray-900 transition">Login</a>
